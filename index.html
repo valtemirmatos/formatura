@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio de Fotografia de Formatura | Seu Nome</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Ícones (para as estrelas) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Eternize sua Conquista</h1>
+            <p>Fotografia de formatura em estúdio com a sofisticação que seu momento merece.</p>
+            <a href="#pacotes" class="cta-button">Conheça Nossos Pacotes</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção do Portfólio -->
+        <section id="portfolio" class="container">
+            <h2>Portfólio Inesquecível</h2>
+            <div class="carousel-container">
+                <div class="carousel-slider">
+                    <!-- As imagens serão inseridas aqui pelo JavaScript -->
+                </div>
+                <button class="carousel-button prev" aria-label="Foto anterior">&#10094;</button>
+                <button class="carousel-button next" aria-label="Próxima foto">&#10095;</button>
+                <div class="carousel-dots">
+                    <!-- As bolinhas serão inseridas aqui pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Pacotes -->
+        <section id="pacotes" class="container">
+            <h2>Pacotes Sob Medida para Você</h2>
+            <div class="pacotes-grid">
+                <!-- Pacote Básico -->
+                <div class="pacote-card">
+                    <h3>Pacote Essencial</h3>
+                    <p class="descricao">A recordação perfeita do seu grande dia.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 30 minutos de sessão</li>
+                        <li><i class="fas fa-check"></i> 1 troca de roupa</li>
+                        <li><i class="fas fa-check"></i> 10 fotos digitais tratadas</li>
+                        <li><i class="fas fa-check"></i> Galeria online</li>
+                        <li><i class="fas fa-check"></i> Cópia revelada 15x21cm</li>
+                        <li><i class="fas fa-check"></i> Beca Inclusa</li>
+                    </ul>
+                    <!-- SEUS DADOS AQUI -->
+                    <div class="preco">R$ 499,00</div>
+                    <a href="#https://wa.me/5528999493346?text=Ol%C3%A1!%20Estou%20interessado(a)%20neste%20pacote%20Essencial%20de%20Formatura." class="cta-button-pacote">Quero Este</a>
+                </div>
+
+                <!-- Pacote Recomendado -->
+                <div class="pacote-card recomendado">
+                    <div class="badge-recomendado">O Mais Popular</div>
+                    <h3>Pacote Premium</h3>
+                    <p class="descricao">A experiência completa para celebrar sua vitória.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 hora de sessão</li>
+                        <li><i class="fas fa-check"></i> Até 3 trocas de roupa</li>
+                        <li><i class="fas fa-check"></i> 25 fotos digitais tratadas</li>
+                        <li><i class="fas fa-check"></i> 1 Pôster 20x30 impresso</li>
+                        <li><i class="fas fa-check"></i> Maquiagem profissional inclusa</li>
+                    </ul>
+                    <!-- SEUS DADOS AQUI -->
+                    <div class="preco">R$ 899,00</div>
+                    <a href="#https://wa.me/5528999493346?text=Ol%C3%A1!%20Estou%20interessado%20neste%20Pacote%20Premium%20de%20Formatura." class="cta-button-pacote">Quero Este</a>
+                </div>
+
+                <!-- Pacote Completo -->
+                <div class="pacote-card">
+                    <h3>Pacote Deluxe</h3>
+                    <p class="descricao">Para quem busca exclusividade e luxo.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 2 horas de sessão</li>
+                        <li><i class="fas fa-check"></i> Trocas de roupa ilimitadas</li>
+                        <li><i class="fas fa-check"></i> Todas as fotos tratadas (mín. 50)</li>
+                        <li><i class="fas fa-check"></i> Álbum fotográfico 20x20</li>
+                        <li><i class="fas fa-check"></i> Maquiagem e cabelo</li>
+                    </ul>
+                    <!-- SEUS DADOS AQUI -->
+                    <div class="preco">R$ 1.599,00</div>
+                    <a href="#https://wa.me/5528999493346?text=Ol%C3%A1!%20Estou%20interessado%20neste%20Pacote%20Deluxe%20de%20Formatura." class="cta-button-pacote">Quero Este</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato/Orçamento -->
+        <section id="contato" class="container">
+            <h2>Solicite um Orçamento Personalizado</h2>
+            <p>Precisa de algo diferente? Preencha o formulário e enviaremos uma proposta exclusiva para você via WhatsApp.</p>
+            <form id="orcamento-form">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Descreva o que você precisa (curso, número de pessoas, ideias, etc.)" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Enviar via WhatsApp</button>
+            </form>
+        </section>
+
+        <!-- Seção de Avaliações -->
+        <section id="avaliacoes" class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div id="lista-avaliacoes">
+                <!-- Avaliações salvas aparecerão aqui -->
+            </div>
+            
+            <div class="form-avaliacao-container">
+                <h3>Deixe sua avaliação</h3>
+                <form id="avaliacao-form">
+                    <input type="text" id="cliente-nome" placeholder="Seu nome" required>
+                    <div class="estrelas-input">
+                        <span>Sua nota:</span>
+                        <i class="fa-regular fa-star" data-value="1"></i>
+                        <i class="fa-regular fa-star" data-value="2"></i>
+                        <i class="fa-regular fa-star" data-value="3"></i>
+                        <i class="fa-regular fa-star" data-value="4"></i>
+                        <i class="fa-regular fa-star" data-value="5"></i>
+                    </div>
+                    <input type="hidden" id="nota-avaliacao" name="nota" value="0">
+                    <textarea id="comentario-avaliacao" placeholder="Conte como foi sua experiência..." rows="4" required></textarea>
+                    <button type="submit" class="cta-button">Enviar Avaliação</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Seu Nome Fotografia. Todos os direitos reservados.</p>
+        <p>Criado com sofisticação para você.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

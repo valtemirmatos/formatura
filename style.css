@@ -1,0 +1,389 @@
+/* --- GERAL E FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --cor-primaria: #D4AF37; /* Dourado */
+    --cor-fundo: #121212; /* Preto suave */
+    --cor-texto: #F5F5F5; /* Branco suave */
+    --cor-card: #1E1E1E; /* Cinza escuro para cards */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--cor-primaria);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* --- HEADER / HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- BOTÕES --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #EAC14D;
+}
+
+/* --- PORTFÓLIO / CARROSSEL --- */
+.carousel-container {
+    position: relative;
+    width: 90%; /* NOVO: O carrossel ocupará 90% da largura da tela */
+    max-width: 900px; /* MANTIDO: Em telas grandes, ele não passará de 900px */
+    min-width: 300px; /* NOVO: Garante que não fique pequeno demais em telas muito estreitas */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* ADICIONE ESTA NOVA CLASSE */
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* E AJUSTE O SELETOR DA IMAGEM ASSIM */
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--cor-primaria);
+}
+
+/* --- PACOTES --- */
+.pacotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pacote-card {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pacote-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.pacote-card.recomendado {
+    border-color: var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+.badge-recomendado {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.pacote-card h3 {
+    font-size: 1.8rem;
+}
+
+.pacote-card .descricao {
+    color: #ccc;
+    min-height: 40px;
+}
+
+.pacote-card ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.pacote-card ul li {
+    margin-bottom: 0.8rem;
+}
+
+.pacote-card ul li .fa-check {
+    color: var(--cor-primaria);
+    margin-right: 10px;
+}
+
+.pacote-card .preco {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    margin: 1rem 0;
+}
+
+.cta-button-pacote {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--cor-primaria);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid var(--cor-primaria);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button-pacote:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+}
+
+/* --- FORMULÁRIO --- */
+#contato p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#orcamento-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#orcamento-form input,
+#orcamento-form textarea,
+.form-avaliacao-container input,
+.form-avaliacao-container textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+#orcamento-form input::placeholder,
+#orcamento-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* --- AVALIAÇÕES --- */
+#lista-avaliacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.avaliacao-card {
+    background-color: var(--cor-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.avaliacao-card h4 {
+    color: var(--cor-texto);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+}
+
+.estrelas-display .fa-star {
+    color: var(--cor-primaria);
+}
+
+.avaliacao-card p {
+    color: #ccc;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.form-avaliacao-container {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    background-color: var(--cor-card);
+    border-radius: 8px;
+}
+
+.form-avaliacao-container h3 {
+    margin-bottom: 1.5rem;
+}
+
+#avaliacao-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.estrelas-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.estrelas-input .fa-star {
+    color: #777;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.estrelas-input .fa-star:hover,
+.estrelas-input .fa-star.hover,
+.estrelas-input .fa-star.selecionada {
+    color: var(--cor-primaria);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .container { padding: 2rem 1rem; }
+    .pacote-card.recomendado { transform: scale(1); }
+}
