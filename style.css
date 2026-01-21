@@ -66,7 +66,7 @@ p {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -382,7 +382,7 @@ footer {
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
+    h1 { font-size: 1.5rem; }
     h2 { font-size: 2rem; }
     .container { padding: 2rem 1rem; }
     .pacote-card.recomendado { transform: scale(1); }
