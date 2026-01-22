@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SEUS DADOS AQUI: Verifique se os nomes das suas fotos correspondem a estes.
     // Se suas fotos forem .png ou .jpeg, altere aqui. Ex: 'foto1.png'
     const images = [
-        'img/foto1.jpg', 'img/foto2.jpg', 'img/foto3.jpg', 'img/foto4.jpg', 'img/foto5.jpg', 'img/foto6.jpg', 'img/foto7.jpg', 'img/foto8.jpg', 'img/foto9.jpg', 'img/foto10.jpg'
+        'img/foto1.jpg', 'img/foto2.jpg', 'img/foto3.jpg', 'img/foto4.jpg', 'img/foto5.jpg', 'img/foto6.jpg', 'img/foto7.jpg', 'img/foto8.jpg', 'img/foto9.jpg', 'img/foto10.jpg', 'img/foto11.jpg', 'img/foto12.jpg'
     ];
     let currentIndex = 0;
     let autoSlideInterval;
@@ -201,4 +201,5 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarAvaliacoes();
 
 });
+
 
